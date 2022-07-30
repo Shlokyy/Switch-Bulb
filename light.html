@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Bulb</title>
+    <style>
+        .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+    </style>
+</head>
+<body style="background-color: black">
+ <img id="image" class="center" src="bulb-off.png" alt="">
+ <button id="button" style="margin-top: 20px" class="center" onclick="change()">Turn On</button>
+
+</body>
+<script>
+function change(){
+    var im = document.getElementById("image")
+    var bt = document.getElementById("button")
+    if(bt.textContent.includes("On")){
+        im.src = "bulb-on.png"
+        bt.textContent = "Turn Off"
+    }else{
+        im.src = "bulb-off.png"
+        bt.textContent = "Turn On"
+    }
+}
+
+
+
+
+
+</script>
